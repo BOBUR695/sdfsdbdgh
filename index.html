@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WATCH</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo">
+      <i class="fa-solid fa-clapperboard"></i>
+      <span>WATCH</span>
+    </div>
+
+    <nav>
+      <a class="active"><i class="fa-solid fa-house"></i>Home</a>
+      <a><i class="fa-regular fa-heart"></i>Favourites</a>
+      <a><i class="fa-solid fa-chart-line"></i>Trending</a>
+      <a><i class="fa-regular fa-calendar"></i>Coming soon</a>
+    </nav>
+
+    <div class="bottom">
+      <a><i class="fa-solid fa-users"></i>Community</a>
+      <a><i class="fa-regular fa-comment"></i>Social</a>
+      <a><i class="fa-solid fa-gear"></i>Settings</a>
+      <a class="logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <header class="topbar">
+      <div class="menu">
+        <span>Movies</span>
+        <span>Series</span>
+        <span>Documentaries</span>
+      </div>
+      <div class="profile">
+        <div class="fa-solid fa-magnifying-glass"></div>
+        <div class="fa-regular fa-bell"></div>
+        <img src="Ellipse 757.png" alt="">
+        <span>Imanol</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Harry Potter</h1>
+        <p>2004 | Mystery | 3 Season</p>
+        <div class="hero-buttons">
+          <button class="watch">Watch now</button>
+          <button class="fav"><i class="fa-regular fa-heart"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="films">
+      <h2>Films</h2>
+      <div class="films-row" id="films"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="films.js"></script>
+</body>
+</html>
