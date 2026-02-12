@@ -1,10 +1,30 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
+.films {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 20px;
+}
+
+.films > div {
+    width: calc(25% - 15px);  
+    display: flex;
+    flex-direction: column;
+}
+
+.films div img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;       
+}
+  
 body {
   background: #0f0f14;
   color: #fff;
@@ -12,151 +32,118 @@ body {
 
 .app {
   display: flex;
-  height: 100vh;
+  height: 100vh ;
 }
 
+
 .sidebar {
-  width: 260px;
-  background: #14141c;
-  padding: 25px;
+  width: 240px;
+  background: #111118;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 20px;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: 700;
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
-nav a, .bottom a {
-  display: flex;
-  gap: 12px;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 12px;
+.menu ul,
+.sidebar-bottom ul {
+  list-style: none;
+}
+
+.menu li,
+.sidebar-bottom li {
+  padding: 12px 0;
   cursor: pointer;
-  color: #aaa;
+  color: #b5b5c3;
 }
 
-nav a.active,
-nav a:hover,
-.bottom a:hover {
-  background: #1f1f2b;
-  color: #fff;
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #1f1f2e;
 }
 
-.content {
+.main {
   flex: 1;
-  overflow-y: auto;
+  background: linear-gradient(180deg, #1b1b2f, #0f0f14);
 }
 
-.topbar {
-  display: flex;
-  justify-content: space-between;
+
+.header {
   padding: 20px 40px;
 }
 
-.menu span {
-  margin-right: 25px;
-  cursor: pointer;
-  opacity: .7;
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu span:hover {
-  opacity: 1;
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-left li {
+  cursor: pointer;
+  color: #b5b5c3;
+}
+
+.nav-right li {
+  cursor: pointer;
 }
 
 .profile {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
-.profile img {
+.avatar {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-}
+}  
 
-.hero {
-  height: 420px;
-  background: linear-gradient(to right, rgba(0,0,0,.7), transparent),
-    url("Rectangle\ 201.png") center/cover;
-  border-radius: 25px;
-  margin: 0 40px;
-  display: flex;
-  align-items: flex-end;
-}
-
-.hero-content {
-  padding: 40px;
-}
-
-.hero h1 {
-  font-size: 56px;
-}
-
-.hero-buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-}
-
-.watch {
-  background: #7b3fe4;
-  border: none;
-  padding: 14px 26px;
-  border-radius: 14px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.fav {
-  background: #fff;
-  border: none;
-  padding: 14px;
-  border-radius: 14px;
-  cursor: pointer;
+li img {
+    margin-left: 20px;
+    margin-right: 3px;
+    margin-top: 10px;
 }
 
 .films {
-  padding: 40px;
+    overflow: scroll;
+    max-height: 540px;
 }
 
-.films-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 25px;
+.films::-webkit-scrollbar {
+    display: none;
 }
 
-.card {
-  background: #1a1a25;
-  border-radius: 18px;
-  overflow: hidden;
-  transition: .3s;
+input {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(100.38deg, #FFFFFF 9.52%, rgba(255, 255, 255, 0) 155.68%);
 }
 
-.card:hover {
-  transform: translateY(-8px);
+header {
+  background-image: url(./images/Rectangle\ 201.png);
+  background-size: cover;
+  min-height: 400px;
 }
 
-.card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 15px;
-}
-
-.card-body h3 {
-  font-size: 16px;
-}
-
-.card-body p {
-  font-size: 13px;
-  opacity: .7;
+.films div {
+  max-height: 301px;
+  max-width: 255px;
+  margin: 20px;
 }
